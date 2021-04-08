@@ -1,0 +1,26 @@
+html
+    head
+        title Restaurant Statistics
+    body
+        include ../partials/header
+
+        div
+            ul
+            each rest in orderHistory
+                li Restaurant: #{rest.name}
+                li Total Orders: #{rest.orders.length - 1}
+                -const average = rest.totalRevenue / (rest.orders.length - 1);
+                li Average Order Price #{average}
+                -let tally = 0
+                -let fave = ""
+                each item in rest.orders
+                    if item.quantity > tally
+                        tally = #{item.quantity}
+                        fave = ""
+                        fave = #{item.name}
+
+                li Most Popular Item: #{fave}
+
+
+
+

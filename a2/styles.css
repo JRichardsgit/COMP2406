@@ -1,0 +1,12 @@
+.sections{
+    float: left;
+    width: 15%;
+}
+.menuItems{
+    float: left;
+    width: 70%;
+}
+.order{
+    float: right;
+    width: 25%;
+}

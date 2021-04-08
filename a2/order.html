@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order</title>
+    <style>
+        .sections{
+            float: left;
+            width: 20%;
+        }
+        .menuItems {
+            float: left;
+            width: 55%;
+        }
+        .order{
+            float: right;
+            width: 35%;
+        }
+
+        .menu:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body onload="init()">
+<script src="client.js"></script>
+<div>
+    <div>
+        <a href ='http://localhost:3000/'>Home</a>
+    </div>
+    <div>
+        <a href ='http://localhost:3000/order.html'>OrderPage</a>
+    </div>
+    <div>
+        <a href ='http://localhost:3000/stats'>Statistics</a>
+    </div>
+</div>
+
+
+
+
+    <div>
+    <h3>Restaurant Finder</h3>
+</div>
+
+    <div class="dropdown">
+        <select id="dropdown" onchange="changeRest()"></select>
+    </div>
+
+    <div class="menu" id="menu">
+        <h2>To Begin, Select a Restaurant.</h2>
+
+        <div id="sections" class="sections"></div>
+
+        <div id="menuItems" class="menuItems"></div>
+
+        <div id="order" class="order"></div>
+
+    </div>
+</body>
+</html>
